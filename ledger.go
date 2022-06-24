@@ -75,6 +75,7 @@ func FindLedger() (*Ledger, error) {
 		// Workarounds for possible empty usage pages
 		deviceFound = deviceFound ||
 			(d.Product == "Nano S" && d.Interface == 0) ||
+			(d.Product == "Nano S Plus" && d.Interface == 0) ||
 			(d.Product == "Nano X" && d.Interface == 0)
 
 		if deviceFound {
